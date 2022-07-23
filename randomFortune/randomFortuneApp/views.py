@@ -2,9 +2,13 @@ from django.shortcuts import render
 
 # Create your views here.
 def home(req):
-    pass
-    return render(req,'home.html')
+    if(req.method == "POST"):
+        print(req.POST.get('username'))
+        username = req.POST.get('username')
+        return render(req,'result.html',{'username':username})
+    elif(req.method == "GET"):
+        return render(req,'home.html')
+    
 
 def result(req):
-    pass
     return render(req,"result.html")

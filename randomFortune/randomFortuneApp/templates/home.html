@@ -8,5 +8,10 @@
   </head>
   <body>
     hello
+    <form method="POST">
+      {% csrf_token %}
+      <input name="username" placeholder="이름을 입력해 보세용" />
+      <input type="submit" />
+    </form>
   </body>
 </html>
