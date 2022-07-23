@@ -1,1 +1,1 @@
-hahaHi..
+This is Random fortune service~~~~~~~~~~~
