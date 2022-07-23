@@ -1,1 +1,2 @@
-push
+This is Random fortune service~~~~~~~~~~~
+
