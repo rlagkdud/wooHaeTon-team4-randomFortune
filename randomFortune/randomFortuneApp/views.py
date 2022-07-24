@@ -13,9 +13,16 @@ def getPlace():
     luckyPlace = random.choice(placeList)
     return luckyPlace
 
+def getNumber():
+    numberList = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
+    luckyNumber = random.choice(numberList)
+    return luckyNumber
+
 def getColor():
     luckyColor = ["#"+''.join([random.choice('0123456789ABCDEF') for j in range(6)])]
     return luckyColor
+
+
 
 def home(req):
     if(req.method == "POST"):
@@ -23,7 +30,8 @@ def home(req):
         luckyItem = getItem()
         luckyPlace = getPlace()
         luckyColor = getColor()
-        return render(req,'result.html',{'username':username,'luckyItem':luckyItem, 'luckyPlace':luckyPlace, 'luckyColor':luckyColor})
+        luckyNumber = getNumber()
+        return render(req,'result.html',{'username':username,'luckyItem':luckyItem, 'luckyPlace':luckyPlace, 'luckyColor':luckyColor, 'luckyNumber':luckyNumber})
     elif(req.method == "GET"):
         return render(req,'home.html')
 
