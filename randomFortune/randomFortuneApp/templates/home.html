@@ -1,17 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    hello
-    <form method="POST">
-      {% csrf_token %}
-      <input name="username" placeholder="이름을 입력해 보세용" />
-      <input type="submit" />
-    </form>
-  </body>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<link rel="stylesheet" href="CSS/style.css">-->
+    <link rel="stylesheet" href="../static/CSS/style.css">
+    <title>🍀Random Fortune🍀</title>
+</head>
+<body>
+    <section>
+        <div class="titleArea">
+            <img id="changeTitle" style="margin-top: 120px;" src="../static/Image/title1.png">
+        </div>
+        <div class="midImg">
+            <img id="changeImg" src="../static/Image/titleImage1.png"> <!--Basic size : 1322*431-->
+        </div>
+        <div class="midArea">
+            <p id="greeting1">안녕하세요 ~ 여러분 ~ ^^ !!</p>
+            <p id="greeting2">행운의 사나이가 되고싶으신가요? 그렇다면 잘 왔습니다.</p>
+            <p id="greeting3">당신의 럭키포인트를 최대로 끌어올릴 절호의 기회!!!!</p>
+            <p id="greeting4">오늘의 럭키걸(혹은 보이), 당신의 이름을 입력해주세요.</p>
+            <form id="name-form" method="POST">
+              {% csrf_token %}
+              <input
+              required
+              name="username"
+              type="text"
+              placeholder="써줘!!!"
+              />
+              <input id=btncolor type="submit" value="완료♥" />
+            </form>
+            <p id="introduce" class="hidden"></p>
+            <p id="cont1" class="hidden">자 그럼, 오늘의 행운을 추천받으시러 가보실까요?</p>
+            <div class="lastArea">
+                <a href="/result.html">
+                    <img id="goBtnImg" class="hidden" src="../static/Image/goBtn.png">
+                </a>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>copyright likelion-ERICA. All rights reserved.</p>
+    </footer>
+    <script src="../static/app.js"></script>
+</body>
 </html>
