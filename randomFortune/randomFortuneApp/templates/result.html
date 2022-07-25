@@ -1,12 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    result! username: {{username}} | 아이템은: {{luckyItem}} | 장소는: {{luckyPlace}} | 색상은: {{luckyColor}} | 숫자는: {{luckyNumber}}
-  </body>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/CSS/style2.css">
+    <title>🍀Random Fortune🍀</title>
+</head>
+<body>
+    <section>
+        <div class="resultTitleArea">
+            <p id="intro1">{{ username }} 님의 오늘의 행운은 … !!!</p> <!--아이템 장소 컬러 숫자-->
+        </div>
+        <div class="resultMidArea">
+            <div class="titleSet1">
+                <img style="margin-right: 30px;" id="resultImg1" src="../static/Image/resultItem.png"> <!--510*512-->
+                <div class="element1"><p class="introSize">{{ luckyItem }}</p></div> <!--Django값 받아오는 부분-->
+            </div>
+            <div class="titleSet1">
+                <img style="margin-left: 30px;" id="resultImg1" src="../static/Image/resultItem2.png">
+                <div class="element2"><p class="introSize">{{ luckyPlace }}</p></div> <!--Django값 받아오는 부분-->
+            </div>
+        </div>
+        <div class="resultMidArea">
+            <div class="titleSet1">
+                <img style="margin-right: 30px; padding-top: 60px; padding-bottom: 130px;" id="resultImg1" src="../static/Image/resultItem3.png">
+                <div class="element3">
+                <div style=" background-color: #B2A4FF;" id="colorCircle"></div> <!--Django값 받아오는 부분, 근데 style태그 안쪽임-->
+                <p class="introSize">{{ luckyColor }}</p> <!--Django값 받아오는 부분-->
+                </div>
+            </div>
+            <div class="titleSet1">
+                <img style="margin-left: 30px; padding-top: 60px; padding-bottom: 130px;" id="resultImg1" src="../static/Image/resultItem4.png">
+                <div class="element4"><p class="introSize">{{ luckyNumber }}</p></div> <!--Django값 받아오는 부분-->
+            </div>
+        </div>
+        <div class="resultLastArea">
+            <p id="coment">어떠세요? 오늘 김멋사 님에게 주어진 행운이 마음에 드시나요?</p>
+            <p id="coment">오늘의 추천템들과 함께 더욱 완벽한 하루를 만들어보세요!</p>
+            <p id="coment3">김멋사 님의 하루에 갑작스러운 행운이 깃들기를 응원하겠습니다 😊</p>
+        </div>
+    </section>
+    <footer>
+        <p>copyright likelion-ERICA. All rights reserved.</p>
+    </footer>
+    <script src="../static/app2.js"></script>
+</body>
 </html>
