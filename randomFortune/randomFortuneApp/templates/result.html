@@ -47,7 +47,7 @@
             src="{%static 'Image/resultItem3.png' %}"
           />
           <div class="element3">
-            <div style="background-color: #b2a4ff" id="colorCircle"></div>
+            <div id="colorCircle"></div>
             <!--Django값 받아오는 부분, 근데 style태그 안쪽임-->
             <p class="introSize">{{ luckyColor }}</p>
             <!--Django값 받아오는 부분-->
@@ -65,19 +65,23 @@
       </div>
       <div class="resultLastArea">
         <p id="coment">
-          어떠세요? 오늘 김멋사 님에게 주어진 행운이 마음에 드시나요?
+          어떠세요? 오늘 {{ username }} 님에게 주어진 행운이 마음에 드시나요?
         </p>
         <p id="coment">
           오늘의 추천템들과 함께 더욱 완벽한 하루를 만들어보세요!
         </p>
         <p id="coment3">
-          김멋사 님의 하루에 갑작스러운 행운이 깃들기를 응원하겠습니다 😊
+          {{ username }} 님의 하루에 갑작스러운 행운이 깃들기를 응원하겠습니다 😊
         </p>
       </div>
     </section>
     <footer>
       <p>copyright likelion-ERICA. All rights reserved.</p>
     </footer>
-    <script src="{% static 'app2.js' %}"></script>
+    <script type="text/javascript">
+      const colorCircle = document.querySelector("#colorCircle");
+      colorCircle.style.backgroundColor = "{{ luckyColor }}";
+    </script>
+    <!--<script src="{% static 'app2.js' %}"></script>-->
   </body>
 </html>
