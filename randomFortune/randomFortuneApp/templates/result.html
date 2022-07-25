@@ -42,7 +42,7 @@
       <div class="resultMidArea">
         <div class="titleSet1">
           <img
-            style="margin-right: 30px; padding-top: 60px; padding-bottom: 130px"
+            style="margin-right: 30px; padding-bottom: 90px"
             id="resultImg1"
             src="{%static 'Image/resultItem3.png' %}"
           />
@@ -55,7 +55,7 @@
         </div>
         <div class="titleSet1">
           <img
-            style="margin-left: 30px; padding-top: 60px; padding-bottom: 130px"
+            style="margin-left: 30px; padding-bottom: 90px"
             id="resultImg1"
             src="{% static 'Image/resultItem4.png' %}"
           />
@@ -74,6 +74,11 @@
           {{ username }} 님의 하루에 갑작스러운 행운이 깃들기를 응원하겠습니다 😊
         </p>
       </div>
+      <div class="reBtn">
+        <a href={% url 'home' %}>
+            <img id="reBtnImg" src="{% static 'Image/reBtn.png' %}">
+        </a>
+      </div>
     </section>
     <footer>
       <p>copyright likelion-ERICA. All rights reserved.</p>
@@ -81,6 +86,19 @@
     <script type="text/javascript">
       const colorCircle = document.querySelector("#colorCircle");
       colorCircle.style.backgroundColor = "{{ luckyColor }}";
+
+      const reBtn = document.querySelector("#reBtnImg");
+
+      function handleMouseEnter() {
+        reBtn.setAttribute("src",("../static/Image/reBtn2.png"));
+      }
+
+      function handleMouseLeave() {
+        reBtn.setAttribute("src",("../static/Image/reBtn.png"));
+      }
+
+      reBtn.addEventListener("mouseenter", handleMouseEnter);
+      reBtn.addEventListener("mouseleave", handleMouseLeave);
     </script>
     <!--<script src="{% static 'app2.js' %}"></script>-->
   </body>
