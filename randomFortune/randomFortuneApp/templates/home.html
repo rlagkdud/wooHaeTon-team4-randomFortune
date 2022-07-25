@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -5,16 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--<link rel="stylesheet" href="CSS/style.css">-->
-    <link rel="stylesheet" href="../static/CSS/style.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'CSS/style.css' %}">
     <title>🍀Random Fortune🍀</title>
 </head>
 <body>
     <section>
         <div class="titleArea">
-            <img id="changeTitle" style="margin-top: 120px;" src="../static/Image/title1.png">
+            <img id="changeTitle" style="margin-top: 120px;" src="{% static 'Image/title1.png' %}">
         </div>
         <div class="midImg">
-            <img id="changeImg" src="../static/Image/titleImage1.png"> <!--Basic size : 1322*431-->
+            <img id="changeImg" src="{%static 'Image/titleImage1.png' %}"> <!--Basic size : 1322*431-->
         </div>
         <div class="midArea">
             <p id="greeting1">안녕하세요 ~ 여러분 ~ ^^ !!</p>
@@ -35,7 +36,7 @@
             <p id="cont1" class="hidden">자 그럼, 오늘의 행운을 추천받으시러 가보실까요?</p>
             <div class="lastArea">
                 <a href={% url 'result' %}>
-                    <img id="goBtnImg" class="hidden" src="../static/Image/goBtn.png">
+                    <img id="goBtnImg" class="hidden" src="{% static 'Image/goBtn.png' %}">
                 </a>
             </div>
         </div>
@@ -43,6 +44,6 @@
     <footer>
         <p>copyright likelion-ERICA. All rights reserved.</p>
     </footer>
-    <script src="../static/app.js"></script>
+    <script src="{% static 'app.js' %}"></script>
 </body>
 </html>
