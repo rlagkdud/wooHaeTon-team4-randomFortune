@@ -1,17 +1,23 @@
-window.onload = function(){
-    let i=1;
-    setInterval(function(){
-      let pic = document.getElementById('changeImg');
-      pic.setAttribute("src",("../static/Image/"+"titleImage"+(i%2+1)+".png"));
-      i++;
-    },1000);
+window.onload = function () {
+  let i = 1;
+  setInterval(function () {
+    let pic = document.getElementById("changeImg");
+    pic.setAttribute(
+      "src",
+      "../static/Image/" + "titleImage" + ((i % 2) + 1) + ".png"
+    );
+    i++;
+  }, 1000);
 
-    let j=1;
-    setInterval(function(){
-      let title = document.getElementById('changeTitle');
-      title.setAttribute("src",("../static/Image/"+"title"+(j%2+1)+".png"));
-      j++;
-    },1000);
+  let j = 1;
+  setInterval(function () {
+    let title = document.getElementById("changeTitle");
+    title.setAttribute(
+      "src",
+      "../static/Image/" + "title" + ((j % 2) + 1) + ".png"
+    );
+    j++;
+  }, 1000);
 };
 
 const nameForm = document.querySelector("#name-form");
@@ -40,11 +46,11 @@ function onNameSubmit(event) {
 }
 
 function handleMouseEnter() {
-  goBtn.setAttribute("src",("../static/Image/goBtn2.png"));
+  goBtn.setAttribute("src", "../static/Image/goBtn2.png");
 }
 
 function handleMouseLeave() {
-  goBtn.setAttribute("src",("../static/Image/goBtn.png"));
+  goBtn.setAttribute("src", "../static/Image/goBtn.png");
 }
 
 nameForm.addEventListener("submit", onNameSubmit);
