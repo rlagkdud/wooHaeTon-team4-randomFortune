@@ -19,7 +19,7 @@
             </div>
             <div class="titleSet1">
                 <img style="margin-left: 30px;" id="resultImg1" src="../static/Image/resultItem2.png">
-                <div class="element2"><p class="introSize">친구집</p></div> <!--Django값 받아오는 부분-->
+                <div class="element2"><p class="introSize">{{ luckyPlace }}</p></div> <!--Django값 받아오는 부분-->
             </div>
         </div>
         <div class="resultMidArea">
@@ -27,12 +27,12 @@
                 <img style="margin-right: 30px; padding-top: 60px; padding-bottom: 130px;" id="resultImg1" src="../static/Image/resultItem3.png">
                 <div class="element3">
                 <div style=" background-color: #B2A4FF;" id="colorCircle"></div> <!--Django값 받아오는 부분, 근데 style태그 안쪽임-->
-                <p class="introSize">#B2A4FF</p> <!--Django값 받아오는 부분-->
+                <p class="introSize">{{ luckyColor }}</p> <!--Django값 받아오는 부분-->
                 </div>
             </div>
             <div class="titleSet1">
                 <img style="margin-left: 30px; padding-top: 60px; padding-bottom: 130px;" id="resultImg1" src="../static/Image/resultItem4.png">
-                <div class="element4"><p class="introSize">9</p></div> <!--Django값 받아오는 부분-->
+                <div class="element4"><p class="introSize">{{ luckyNumber }}</p></div> <!--Django값 받아오는 부분-->
             </div>
         </div>
         <div class="resultLastArea">
