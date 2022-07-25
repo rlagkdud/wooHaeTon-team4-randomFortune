@@ -19,7 +19,7 @@ def getNumber():
     return luckyNumber
 
 def getColor():
-    luckyColor = ["#"+''.join([random.choice('0123456789ABCDEF') for j in range(6)])]
+    luckyColor = "#"+''.join([random.choice('0123456789ABCDEF') for j in range(6)])
     return luckyColor
 
 

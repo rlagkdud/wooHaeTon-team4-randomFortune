@@ -32,18 +32,41 @@
               />
               <input id=btncolor type="submit" value="완료♥" />
             </form>
-            <p id="introduce" class="hidden"></p>
+            <p id="introduce" class="hidden"> {{username}} 님! 환영해요. </p>
             <p id="cont1" class="hidden">자 그럼, 오늘의 행운을 추천받으시러 가보실까요?</p>
             <div class="lastArea">
+                <!--
                 <a href={% url 'result' %}>
-                    <img id="goBtnImg" class="hidden" src="{% static 'Image/goBtn.png' %}">
-                </a>
+                    <img onclick="replaceLink()" id="goBtnImg" class="hidden" src="{% static 'Image/goBtn.png' %}">
+                </a>-->
+                <button style="border: none; background: none;" type="submit">
+                    <a href={% url 'result' %}>
+                        <img id="goBtnImg" class="hidden" src="{% static 'Image/goBtn.png' %}">
+                    </a>
+                </button>
             </div>
         </div>
     </section>
     <footer>
         <p>copyright likelion-ERICA. All rights reserved.</p>
     </footer>
+    <script type="text/javascript">
+        window.onload = function(){
+            let i=1;
+            setInterval(function(){
+            let pic = document.getElementById('changeImg');
+            pic.setAttribute("src",("../static/Image/"+"titleImage"+(i%2+1)+".png"));
+            i++;
+            },1000);
+
+            let j=1;
+            setInterval(function(){
+            let title = document.getElementById('changeTitle');
+            title.setAttribute("src",("../static/Image/"+"title"+(j%2+1)+".png"));
+            j++;
+            },1000);
+        };
+    </script>
     <!--<script src="{% static 'app.js' %}"></script>-->
 </body>
 </html>
