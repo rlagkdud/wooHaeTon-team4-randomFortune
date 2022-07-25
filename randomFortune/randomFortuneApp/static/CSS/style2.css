@@ -49,6 +49,11 @@ section{
 #resultImg1 {
     width: 380px;
     height: 382px;
+    padding-bottom: 120px;
+}
+
+.reBtn {
+    padding-bottom: 120px;
 }
 
 .titleSet1 {
@@ -57,14 +62,14 @@ section{
 
 .element1 {
     position: absolute;
-	top: 50%;
+	top: 43%;
 	left: 46%;
 	transform: translate( -50%, -50% );
 }
 
 .element2 {
     position: absolute;
-	top: 50%;
+	top: 43%;
 	left: 52%;
 	transform: translate( -50%, -50% );
 }
@@ -101,6 +106,5 @@ section{
 }
 
 #coment3 {
-    padding-bottom: 120px;
-    margin-bottom: 0;
+    margin-bottom: 80px;
 }
